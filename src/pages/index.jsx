@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <div className='container mx-auto px-4'>
           <p className='border'>
-            Hello world
+            Hello world v2
           </p>
         </div>
       </main>
