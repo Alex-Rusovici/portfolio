@@ -1,8 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import logo from './../../public/images/logo/logo.svg'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import logo from './../../public/images/logo/logo.svg';
 
+const welcomeButton =
+  'w-44 h-20 rounded-xl shadow-2xl shadow-zinc-600 font-bold text-xl text-zinc-800 uppercase transition-all transition ease-in hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl duration-200';
 
 export default function Home() {
   return (
@@ -13,15 +15,23 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/logo/logo_icon.svg" />
       </Head>
-      <main>
-        <div className='container mx-auto px-4'>
-          <Image src={logo} width={500} height={500} alt="Logo"></Image>
+      <main className="container mx-auto px-4 flex flex-col gap-8 text-center mt-96">
+        <div className="flex justify-center">
+          <Image
+            src={logo}
+            width={500}
+            height={500}
+            alt="Logo"
+            className="drop-shadow-2xl"
+          ></Image>
         </div>
 
         <div>
-          <Link href='/LandingPage'><button>Welcome</button></Link>
+          <Link href="/LandingPage">
+            <button className={welcomeButton}>Welcome</button>
+          </Link>
         </div>
       </main>
     </>
-  )
+  );
 }
