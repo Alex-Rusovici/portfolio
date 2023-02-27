@@ -1,3 +1,4 @@
+import { Header } from '@/components/common/header';
 import Head from 'next/head';
 
 export default function LandingPage() {
@@ -10,9 +11,9 @@ export default function LandingPage() {
         <link rel="icon" href="/images/logo/logo_icon.svg" />
       </Head>
 
-      <main>
-        <div className="container mx-auto px-4">hello</div>
-      </main>
+      <header>
+        <Header></Header>
+      </header>
     </>
   );
 }
