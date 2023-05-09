@@ -1,67 +1,35 @@
-import Image from 'next/image';
-
-const html = 'self-start italic text-zinc-500';
-const h1 =
-  'bg-gradient-to-r from-red-400 via-amber-500 to-purple-500 bg-clip-text text-transparent';
-const h2 = 'font-bold text-zinc-200 text-4xl';
-const h3 = 'text-left text-xl text-zinc-200';
-const bold = 'font-bold';
+import { BsArrowUpLeft, BsArrowUpRight } from 'react-icons/bs';
 
 export const Header = () => {
   return (
-    <div className="bg-zinc-600 p-4">
-      <div className="wrapper py-4 px-4 bg-gradient-to-br from-zinc-900 to-zinc-700 rounded-2xl">
-        <div className="container mx-auto lg:flex lg:justify-between">
-          <section className="flex flex-col gap-8 justify-center text-start text-zinc-200 mb-8 lg:mb-0">
-            <div>
-              <p className={html}>{`<h1>`}</p>
-              <h1 className="font-bold text-left text-8xl">
-                <span className={h1}>Hello, World</span>
-              </h1>
-              <p className={html}>{`</h1>`}</p>
-            </div>
-          </section>
+    <div className="container mx-auto">
+      <h1 className="text-center font-bold text-amber-300 uppercase text-6xl mt-10 mb-20">
+        Frontend Developer
+      </h1>
 
-          <section className="lg:flex lg:justify-start lg:items-center">
-            <div className="flex flex-col gap-4">
-              <div>
-                <p className={html}>{`<h2>`}</p>
-                <h2 className={h2}>
-                  My name is <span className={h1}>Alex</span>
-                </h2>
-                <p className={html}>{`</h2>`}</p>
-              </div>
+      <section className="flex-col justify-center text-slate-200">
+        <button className="mx-auto flex flex-col items-center w-48 uppercase">
+          <div className="flex justify-around w-48 relative">
+            <span className="absolute left-0">
+              <BsArrowUpLeft />
+            </span>
+            <span>Portfolio</span>
+          </div>
+          <span>of Alex Rusovici</span>
+        </button>
 
-              <div>
-                <p className={html}>{`<h3>`}</p>
-                <h3 className={h3}>
-                  I am a junior frontend developer with <br /> a passion for
-                  minimalistic design
-                </h3>
-                <p className={html}>{`</h3>`}</p>
-              </div>
+        <div className="mx-auto w-56 border border-b-1 my-16"></div>
 
-              <div>
-                <p className={html}>{`<button>`}</p>
-                <button className="font-bold text-left text-xl">
-                  Let's get in touch
-                </button>
-                <p className={html}>{`</button>`}</p>
-              </div>
-            </div>
-
-            <div>
-              <Image
-                src={'/../public/images/dev/dev.png'}
-                width={426}
-                height={500}
-                priority={true}
-                alt={`developer`}
-              ></Image>
-            </div>
-          </section>
-        </div>
-      </div>
+        <button className="mx-auto flex flex-col items-center w-48 uppercase">
+          <div className="flex justify-around w-48 relative">
+            <span>Let's talk</span>
+            <span className="absolute right-0">
+              <BsArrowUpRight />
+            </span>
+          </div>
+          <span>about anything</span>
+        </button>
+      </section>
     </div>
   );
 };

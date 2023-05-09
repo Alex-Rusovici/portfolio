@@ -4,7 +4,7 @@ import Link from 'next/link';
 import logo from './../../public/images/logo/logo.svg';
 
 const welcomeButton =
-  'w-44 h-20 rounded-xl shadow-2xl shadow-zinc-600 font-bold text-xl text-zinc-800 uppercase transition-all transition ease-in hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl duration-200';
+  'w-44 h-20 rounded-xl shadow-xl shadow-slate-900 font-bold text-xl bg-amber-300 text-slate-800 uppercase transition-all transition ease-in hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl duration-200';
 
 export default function Home() {
   return (
@@ -15,14 +15,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/logo/logo_icon.svg" />
       </Head>
-      <main className="container mx-auto px-4 flex flex-col gap-8 text-center mt-96">
+      <main className="container mx-auto px-4 flex flex-col gap-8 text-center mt-60 lg:mt-96">
         <div className="flex justify-center">
           <Image
+            priority
             src={logo}
             width={500}
             height={500}
-            alt="Logo"
-            className="drop-shadow-2xl"
+            alt="Dev Logo"
           ></Image>
         </div>
 

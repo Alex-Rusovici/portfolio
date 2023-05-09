@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    font-family: Lato, sans-serif;
-    @apply bg-zinc-100
+  font-family: Mulish, sans-serif;
+  @apply bg-zinc-800;
+  @apply text-zinc-100;
+}
+
+h1 {
+  font-family: Oranienbaum, serif;
 }
